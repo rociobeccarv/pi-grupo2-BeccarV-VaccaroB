@@ -76,6 +76,42 @@ h1{
     justify-self: center;
 }
 
-.middle p{
-    font-size: 18px;
+
+
+.middle  {
+  margin: 5%;
+}
+
+
+.masvisto {
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.familiares {
+    margin: 2.5%;
+    margin-left: 0%;
+    margin-right: 0%;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.accion {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.middle h3 {
+    display: flex;
+    margin-left: 3%;
+
+}
+
+.middle img {
+
+  
 }
