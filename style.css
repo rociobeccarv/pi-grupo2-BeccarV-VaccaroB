@@ -79,3 +79,20 @@ h1{
 .middle p{
     font-size: 18px;
 }
+.pelicula {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    align-items: row;
+}
+.h5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
