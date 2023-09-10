@@ -76,41 +76,23 @@ h1{
     justify-self: center;
 }
 
-
-
-.middle  {
-  margin: 5%;
+.middle p{
+    font-size: 18px;
 }
 
-
-.masvisto {
+.opciones{
     display: flex;
-    justify-content: space-around;
-
-
+    align-items: center;
+    justify-content: center;
+    margin: 15px;
 }
-
-.familiares {
-    margin: 2.5%;
-    margin-left: 0%;
-    margin-right: 0%;
+.h5{
     display: flex;
-    justify-content: space-around;
-
+    align-items: center;
+    justify-content: center;
 }
-
-.accion {
+.img{
     display: flex;
-    justify-content: space-around;
-
-}
-
-.middle h3 {
-    display: flex;
-    margin-left: 3%;
-
-}
-
-body {
-    font-family: 'Rubik', sans-serif;
+    align-items: center;
+    justify-content: center;
 }
