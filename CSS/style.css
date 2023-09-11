@@ -8,12 +8,10 @@ body {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
+    justify-content: flex start;
     background-color: #B9CEAD;
     height: 20vh;
-    padding: 0%;
-    justify-content: space-around;
 }
-   
 .navegation{
     list-style:none;
     display: flex;
@@ -23,35 +21,35 @@ body {
 
 .Nav {
     width: 80%;
-    color: #3E3E36;
+    color:#3E3E36;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin: 10px;
-    margin-left: 15%;
-    margin-right: 10%;
+    margin-right: 20%;
     align-items: center;
     font-size: 28px;
 }
 
 .Nav a {
     text-decoration: none;
-    color: #3E3E36;
+    color: #3E3E36 
 }
 .form{
-    margin-right: 5%;
-    margin-left: 20%;
+
     display: flex;
-    justify-content: center;
     align-items: center;
+    margin-left: 25%;
+    
 }
 
 .logo {
-    margin-right: 20%;
-    margin-left: 5%;
+
+   
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 25%;
+    margin-left: 5%
 }
 
 .logo img {
@@ -68,7 +66,7 @@ body {
 }
 
 .bottom {
-    background-color: #B9CEAD;
+    background-color:#B9CEAD;
     display: flex;
     justify-self: baseline;
     justify-content: center;
@@ -80,86 +78,61 @@ h1{
     justify-self: center;
 }
 
-
-
-.middle  {
-  margin: 5%;
-}
-
-
-.masvisto {
+.middle {
     display: flex;
-    justify-content: space-around;
-
+    flex-direction: column;
+    padding: 5%;
 
 }
 
 .familiares {
-    margin: 2.5%;
-    margin-left: 0%;
-    margin-right: 0%;
     display: flex;
-    justify-content: space-around;
-
 }
 
+.familiares div {
+
+    margin-right: 3%;
+}
+
+.series div {
+    margin-right: 3%
+}
 .series {
     display: flex;
-    justify-content: space-around;
-
 }
-
-.middle h3 {
-    display: flex;
-    margin-left: 3%;
-
-}
-
-
 .pelicula {
     display: flex;
     justify-content: center;
     margin: 20px;
     flex-direction: column;
 }
-.peli img{
-    
-    height: 400px;
-    width: 280px;
-    margin-top: 5%;
-}
-.peliculas h5{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.peliculas p{
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
+.peli img {
+
+    height: 400px;
+}
+.pelicula h5{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .serie-main {
-
-    margin: 2%;
     display: flex;
-    box-sizing: content-box;
-    
- 
 }
 
-.serie {
+.serie{
 
-    margin: 5%;
-    
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .genero {
 
     background-color: #3e3e3663;
-    width: 50px;
-    padding-left: 10px;
+    max-width: 55px;
+    padding-left: 15px;
 }
 
 a {
