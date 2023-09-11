@@ -100,16 +100,22 @@ h1{
 .series {
     display: flex;
 }
-.pelicula {
+.pelicula-main{
     display: flex;
-    justify-content: center;
-    margin: 20px;
-    flex-direction: column;
 }
 
-.peli img {
+.pelicula div {
+    margin-right: 3%
+}
 
-    height: 400px;
+.peliculainfo{
+    margin-left: 10%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.pelicula img{
+    margin: 20%;
 }
 
 .pelicula h4{
