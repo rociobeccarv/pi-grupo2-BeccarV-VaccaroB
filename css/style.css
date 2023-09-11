@@ -146,4 +146,18 @@ a {
     text-decoration: none;
     color: #3E3E36;
 }
+.favorito-main{
+    display: flex;
+    flex-direction: row;
+    padding: 5%;
+}
+.favorito div{
+    margin-right; 15%;
+}
+favorito img{
+    margin: 20%;
+    height: 300px;
+    aspect-ratio: auto 210 / 300;
+    width: 210px;
+}
 
