@@ -111,7 +111,8 @@ h1{
 
     height: 400px;
 }
-.pelicula h5{
+
+.pelicula h4{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -139,3 +140,4 @@ a {
     text-decoration: none;
     color: #3E3E36;
 }
+
