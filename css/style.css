@@ -171,3 +171,8 @@ a {
     flex-direction: column;
     margin: 2%;
 }
+
+.generos h4 {
+    background-color: #3e3e3650;
+    color:#3E3E36;
+}
