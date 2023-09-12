@@ -154,10 +154,10 @@ a {
 .favotito div{
     margin: 15%;
 }
-favorito img{
+.favorito img{
     margin: 20%;
     height: 300px;
-    aspect-ratio: auto 210 / 300;
     width: 210px;
 }
+
 
