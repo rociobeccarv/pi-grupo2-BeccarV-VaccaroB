@@ -150,14 +150,31 @@ a {
     display: flex;
     flex-direction: row;
     padding: 5%;
+    justify-content: space-around;
 }
-.favotito div{
-    margin: 15%;
-}
-.favorito img{
-    margin: 20%;
+
+.favorito-main img {
     height: 300px;
-    width: 210px;
+}
+
+.favoritos h1 {
+
+    margin-left: 5%;
+}
+
+.favoritos h3 {
+
+    margin-left: 5%;
+}
+
+.generosmain {
+
+    margin: 2%
+}
+
+.generosmain h3 {
+
+    margin: 3%
 }
 
 .generos { 
@@ -176,3 +193,23 @@ a {
     background-color: #3e3e3650;
     color:#3E3E36;
 }
+
+.peli-genero {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2%;
+    justify-content: space-around;
+}
+
+.series-genero {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2%;
+    justify-content: space-around;
+}
+
+.titulo-genero {
+
+    margin-left: 4%;
+}
+
