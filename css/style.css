@@ -227,7 +227,7 @@ a {
     width : 100%;
    }
 
-   .logo {
+   .logo img {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -248,29 +248,20 @@ a {
     width: 65%;
    }
    .middle {
-    margin: 10px;
+    margin: 10%;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: row;
     }
    
-   .items {
-    width: 100%;
-   }
-   .listfooter {
-    flex-direction: column;
-    
-    
-   }
-
-   .itemfooter {
-    width: 80%;
+   .pelicula-main{
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 1px;
     justify-content: center;
-    max-height: 50%;
+   }
+   .peliculainfo{
+    display: flex;
+    justify-content: center;
+    margin: 10%;
    }
 }
 
