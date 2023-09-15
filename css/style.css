@@ -213,3 +213,64 @@ a {
     margin-left: 4%;
 }
 
+/*Medidas telefonos*/
+
+@media(max-width:420px){
+    .navHeader{
+        margin-left: 10px;
+    }
+    body{
+        padding: 10px;
+    }
+   .top {
+
+    width : 100%;
+   }
+
+   .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+   }
+
+   .sectionheader {
+
+    width: 100%;
+   }
+
+   .img {
+    width: 100%;
+   }
+
+   .navbar{
+    flex-direction: column;
+    width: 65%;
+   }
+   .middle {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+   
+   .items {
+    width: 100%;
+   }
+   .listfooter {
+    flex-direction: column;
+    
+    
+   }
+
+   .itemfooter {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 1px;
+    justify-content: center;
+    max-height: 50%;
+   }
+}
+
