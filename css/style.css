@@ -216,30 +216,27 @@ a {
 /*Medidas telefonos*/
 
 @media(max-width:420px){
+
+ 
     .navHeader{
         margin-left: 10px;
     }
-    body{
-        padding: 10px;
-    }
+
    .top {
 
     width : 100%;
    }
 
-   .logo img {
+   .logo {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin: 0%;
+    margin-top: 1%;
    }
 
    .sectionheader {
-
-    width: 100%;
-   }
-
-   .img {
     width: 100%;
    }
 
@@ -248,7 +245,6 @@ a {
     width: 65%;
    }
    .middle {
-    margin: 10%;
     display: flex;
     flex-wrap: wrap;
     justify-content: row;
@@ -257,11 +253,129 @@ a {
    .pelicula-main{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+   }
+   .pelicula-main {
+
+    margin: 0%;
    }
    .peliculainfo{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     margin: 10%;
    }
+
+   .avatar {
+    display: flex;
+    justify-content: center;
+   }
+
+   .bottom h1 {
+    display: flex;
+    justify-self: flex-end;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .familiares {
+
+    display: flex;
+    flex-wrap: wrap;
+    
+   }
+
+   .familiares img { 
+
+    width: 160px;
+    height: 250px;
+   }
+   .series{
+   
+    display: flex;
+    flex-wrap: wrap;
+    
+
+   }
+
+   .series img {
+
+    width: 150px;
+    height: 240px;
+
+   }
+
+   .series div {
+
+    width: 45%;
+   }
+   .pelis {
+    flex-wrap: wrap;
+   }
+
+   .generos div {
+
+    width:55px;
+    
+   }
+
+   .generosmain {
+    height: 65vh;
+   }
+
+   .favorito-main {
+    display: flex;
+    flex-wrap: wrap;
+   }
+   .favorito-main img{
+    
+    width: 150px;
+    height: 240px;
+
+   }
+
+   .favorito-main div {
+    width: 45%;
+   }
+
+   .serie info {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10%;
+
+   } 
+   .serie-main {
+    display: flex;
+    flex-direction: column;
+
+   }
+
+   .peli-genero {
+
+    flex-wrap: wrap;
+    padding: 0%;
+    margin: 2%;
+   }
+
+   .peli-genero img{
+    
+    width: 150px;
+    height: 240px;
+   }
+   .series-genero {
+
+    flex-wrap: wrap;
+    padding: 0%;
+    margin: 2%;
+   }
+
+   .series-genero img{
+    
+    width: 150px;
+    height: 240px;
+   }
+   
 }
 
