@@ -98,25 +98,25 @@ h1{
 .series {
     display: flex;
 }
-.pelicula-main{
+.avatar-main{
     display: flex;
 }
 
-.pelicula div {
+.avatar div {
     margin-right: 3%
 }
 
-.peliculainfo{
+.avatarinfo{
     margin-left: 10%;
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
-.pelicula img{
+.avatar img{
     margin: 20%;
 }
 
-.pelicula h4{
+.avatar h4{
     display: flex;
     align-items: center;
     justify-content: center;
