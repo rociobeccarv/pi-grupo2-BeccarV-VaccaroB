@@ -83,11 +83,11 @@ h1{
 
 }
 
-.familiares {
+.calificadas {
     display: flex;
 }
 
-.familiares div {
+.calificadas div {
 
     margin-right: 3%;
 }
@@ -374,7 +374,7 @@ a {
     width: 150px;
     height: 240px;
    }
-   
+    }
    .opciones {
     display: none;
     position: absolute;
