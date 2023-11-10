@@ -5,43 +5,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-
 </head>
 
 <body>
+
     <header class="top">
-        <section class="logo">
-            <img style="border-radius: 200px;" src="./img/HOME.png" alt="logo">
-        </section>
-        <section class="navbar">
-            <nav class="nav.header"> </nav>
-            <ul class="navegation">
-                <li class="Nav HOME"> <a href=".//index.html" rel="noopener noreferrer">HOME</a></li>
-                <li class="Nav GENEROS"><a href=".//generos.html">GENEROS</a> </li>
-                <li class="Nav FAVORITOS"> <a href=".//favorito.html">FAVORITOS</a> </li>
-
-            </ul>
-            <a href=".//index.html" target="_blank" rel="noopener noreferrer"></a>
-        </section>
-
-        <h1 class="bienvenido">
-            <title> BIENVENIDO </title>
-        </h1>
-
-        <section class="form">
-            <form action="./busqueda.html">
-                <label for="busqueda"></label>
-                <input type="text" value="busqueda">
-                <input type="submit" value="Buscar">
-            </form>
+            <section class="logo">
+                <img style="border-radius: 200px;" src="./img/HOME.png" alt="logo">
+            </section>
+            <section class="navbar">
+                <nav class="nav.header"> </nav>
+                <a href="./index.html" target="_blank" rel="noopener noreferrer"></a>
+            </section>
+           
+            <h1 class="bienvenido">
+                <title> BIENVENIDO </title>
+            </h1> 
+    
+            <section class="form">
+                <form action="./busqueda.html">
+                    <label for="busqueda"></label>
+                    <input type="text" value="busqueda">
+                    <input type="submit" value="Buscar">
+                </form>
 
 
-        </section>
+            </section class = "menu">
+                <div class="menu">
+                <button class="menu-btn" onclick="toggleMenu()">Menú</button>
+                    <div id="opciones" class="opciones">
+                        <a href="./index.html"> HOME</a>
+                        <a href="./favorito.html"> FAVORITOS</a>
+                        <a href="./generos.html"> GENEROS</a>
+                    </div>
+                </div>
+            
+                <script src="script.js"></script>
+                </div>
+            
+                <script src="index.js"></script>
+            <section>
+
+            </section>
     </header>
     <main class = "pelicula-main">
 
@@ -88,7 +98,11 @@
 
     </main>
     <footer class="bottom">
+        <section class = logo> 
+            <img src="./img/logo.svg" alt="logo"> 
+        </section>
         <h1> Rocio Beccar Varela & Natalia Vaccaro Bianchi </h1>
+        <script src="index.js"></script>
     </footer>
 </body>
 
