@@ -5,26 +5,18 @@ let PelículasPopulares =`https://api.themoviedb.org/3/movie/popular?api_key=${a
 
 let SeriesPopulares = `https://api.themoviedb.org/3/tv/popular?api_key=${acaVaLaAPIKey}`
 
+function toggleMenu() {
+    var opciones = document.getElementById("opciones");
+    opciones.style.display = opciones.style.display === "block" ? "none" : "block";
+}
 
-let menuBtn = document.querySelector('#menuBtn');
-let menuOptions = document.querySelector('#menuOptions');
-let searchForm = document.querySelector('.searchForm');
+// Cerrar el menú si se hace clic fuera de él
+document.addEventListener("click", function(event) {
+    var opciones = document.getElementById("opciones");
+    var menuBtn = document.querySelector(".menu-btn");
 
-menuBtn.addEventListener('click', function (event) {
-    event.stopPropagation(); // Evita que el clic en el botón se propague al documento
-    menuOptions.style.display = (menuOptions.style.display === 'none') ? 'block' : 'none';
-
+    if (event.target !== menuBtn && event.target !== opciones) {
+        opciones.style.display = "none";
+    }
 });
-
-    // Cierra el menú si se hace clic fuera de él
-document.addEventListener('click', function () {
-        menuOptions.style.display = 'none';
-});
-
-
-// Cierra el menú si se desplaza la ventana
-window.addEventListener('scroll', function () {
-    menuOptions.style.display = 'none';
-});
-
 
