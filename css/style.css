@@ -98,11 +98,11 @@ h1{
 
 }
 
-.calificadas {
+.familiares {
     display: flex;
 }
 
-.calificadas div {
+.familiares div {
 
     margin-right: 3%;
 }
@@ -113,25 +113,25 @@ h1{
 .series {
     display: flex;
 }
-.avatar-main{
+.pelicula-main{
     display: flex;
 }
 
-.avatar div {
+.pelicula div {
     margin-right: 3%
 }
 
-.avatarinfo{
+.peliculainfo{
     margin-left: 10%;
     margin-top: 5%;
     margin-bottom: 5%;
 }
 
-.avatar img{
+.pelicula img{
     margin: 20%;
 }
 
-.avatar h4{
+.pelicula h4{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -389,32 +389,6 @@ a {
     width: 150px;
     height: 240px;
    }
-    }
-   .opciones {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+   
 }
 
-.opciones a {
-    padding: 12px 16px;
-    display: block;
-    text-decoration: none;
-    color: #333;
-}
-
-.opciones a:hover {
-    background-color: #f1f1f1;
-}
-
-.menu {
-    position: relative;
-    display: inline-block;
-}
-
-.menu-btn {
-    cursor: pointer;
-}

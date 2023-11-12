@@ -5,18 +5,90 @@ let PelículasPopulares =`https://api.themoviedb.org/3/movie/popular?api_key=${a
 
 let SeriesPopulares = `https://api.themoviedb.org/3/tv/popular?api_key=${acaVaLaAPIKey}`
 
-function toggleMenu() {
-    var opciones = document.getElementById("opciones");
-    opciones.style.display = opciones.style.display === "block" ? "none" : "block";
-}
 
-// Cerrar el menú si se hace clic fuera de él
-document.addEventListener("click", function(event) {
-    var opciones = document.getElementById("opciones");
-    var menuBtn = document.querySelector(".menu-btn");
+let menuBtn = document.querySelector('#menuBtn');
+let menuOptions = document.querySelector('#menuOptions');
+let searchForm = document.querySelector('.searchForm');
 
-    if (event.target !== menuBtn && event.target !== opciones) {
-        opciones.style.display = "none";
-    }
+let listaMejores = document.querySelector("#mejores");
+let listaPopulares = document.querySelector("#populares");
+let listaSeries = document.querySelector("#series");
+
+menuBtn.addEventListener('click', function (event) {
+    event.stopPropagation(); // Evita que el clic en el botón se propague al documento
+    menuOptions.style.display = (menuOptions.style.display === 'none') ? 'block' : 'none';
+
 });
 
+    // Cierra el menú si se hace clic fuera de él
+document.addEventListener('click', function () {
+        menuOptions.style.display = 'none';
+});
+
+fetch(Mejorcalificadas)
+.then(function(response) {
+    return response.json();
+})
+.then(function(data) {
+
+    let contenido = "";
+
+    for (let i = 0; i < 5; i++) {
+        let pelicula = data.results[i];
+        let poster = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`
+        contenido += `<div>
+            <a href="./pelicula.html"  rel="noopener noreferrer">
+                <img src=${poster} alt="avatar" height="300px" width = "210">
+            </a> 
+            ${pelicula.original_title} (${pelicula.release_date})
+        </div><br/>`   
+    }
+
+    listaMejores.innerHTML = contenido;
+    
+})
+
+fetch(PelículasPopulares)
+.then(function(response) {
+    return response.json();
+})
+.then(function(data) {
+
+    let contenido = "";
+
+    for (let i = 0; i < 5; i++) {
+        let pelicula = data.results[i];
+        let poster = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`
+        contenido += `<div>
+            <a href="./pelicula.html"  rel="noopener noreferrer">
+                <img src=${poster} alt="avatar" height="300px" width = "210">
+            </a> 
+            ${pelicula.original_title} (${pelicula.release_date})
+        </div><br/>`   
+    }
+
+    listaPopulares.innerHTML = contenido;
+})
+
+fetch(SeriesPopulares)
+.then(function(response) {
+    return response.json();
+})
+.then(function(data) {
+    console.log(data);
+
+    let contenido = "";
+
+    for (let i = 0; i < 5; i++) {
+        let pelicula = data.results[i];
+        let poster = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`
+        contenido += `<div>
+            <a href="./pelicula.html"  rel="noopener noreferrer">
+                <img src=${poster} alt="avatar" height="300px" width = "210">
+            </a> 
+            ${pelicula.original_title} (${pelicula.release_date})
+        </div><br/>`   
+    }
+
+    listaSeries.innerHTML = contenido;
+})
