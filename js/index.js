@@ -45,6 +45,14 @@ fetch(Mejorcalificadas)
     }
 
     listaMejores.innerHTML = contenido;
+
+    function guardarEnLocalStorage(index) {
+        // Obtener la película seleccionada
+        let peliculaSeleccionada = data.results[index];
+    
+        // Convertir la información a cadena JSON y guardar en localStorage
+        localStorage.setItem('peliculaSeleccionada', JSON.stringify(peliculaSeleccionada));
+    }
     
 })
 
@@ -68,6 +76,14 @@ fetch(PelículasPopulares)
     }
 
     listaPopulares.innerHTML = contenido;
+
+    function guardarEnLocalStorage(index) {
+        // Obtener la película seleccionada
+        let peliculaSeleccionada = data.results[index];
+    
+        // Convertir la información a cadena JSON y guardar en localStorage
+        localStorage.setItem('peliculaSeleccionada', JSON.stringify(peliculaSeleccionada));
+    }
 })
 
 fetch(SeriesPopulares)
@@ -91,4 +107,14 @@ fetch(SeriesPopulares)
     }
 
     listaSeries.innerHTML = contenido;
+
+    function guardarEnLocalStorage(index) {
+        // Obtener la película seleccionada
+        let peliculaSeleccionada = data.results[index];
+    
+        // Convertir la información a cadena JSON y guardar en localStorage
+        localStorage.setItem('peliculaSeleccionada', JSON.stringify(peliculaSeleccionada));
+    }
 })
+
+
