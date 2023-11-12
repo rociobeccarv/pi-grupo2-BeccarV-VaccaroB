@@ -34,13 +34,20 @@
             </h1> 
     
             <section class="form">
-                <form action="./busqueda.html">
+                <form class ="searchForm">
                     <label for="busqueda"></label>
-                    <input type="text" value="busqueda">
-                    <input type="submit" value="Buscar">
+                    <input type="text" class= "busqueda" placeholder="Buscar...">
+                    <button type="submit">Buscar</button>
                 </form>
+            </section>
 
-
+            </section>
+            <section class = "menu">
+                <button id="menuBtn">Menu</button>
+                <div id="menuOptions" style="display: none; position: absolute; top: 40px; left: 0; padding: 10px; background-color: #fff; border: 1px solid #ccc;">
+                    <a href="./generos.html">Géneros</a>
+                    <a href="./favorito.html">Favoritos</a>
+                </div>
             </section>
     </header>
 
@@ -178,9 +185,13 @@
 
     <footer class="bottom">
        
-        <h1> Rocio Beccar Varela & Natalia Vaccaro Bianchi </h1>
-        <section> <img src="./img/logo.svg" alt="" style = "200px;"></section>
+        
+        <h1 class =  "nombres"> Rocio Beccar Varela & Natalia Vaccaro Bianchi </h1>
+        <div class = "TMDB">
+        <img src="./img/logo.svg" alt="logo" height="50px">
+        </div>
     </footer>
+    <script src="./js/index.js"></script>
 </body>
 
 </html>
