@@ -36,7 +36,7 @@ fetch(Mejorcalificadas)
         let pelicula = data.results[i];
         let poster = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`
         contenido += `<div>
-            <a href="./pelicula.html"  rel="noopener noreferrer">
+            <a href="./titulo.html?idPelicula=${pelicula.id}"  rel="noopener noreferrer">
                 <img src=${poster} alt="avatar" height="300px" width = "210">
             </a> 
             ${pelicula.original_title} (${pelicula.release_date})

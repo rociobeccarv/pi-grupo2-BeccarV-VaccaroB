@@ -123,22 +123,20 @@ h1{
     margin-right: 3%
 }
 
-.peliculainfo{
-    margin-left: 10%;
-    margin-top: 5%;
-    margin-bottom: 5%;
-}
-
-.pelicula img{
-    margin: 20%;
-}
-
-.pelicula h4{
+.titulo{
     display: flex;
-    align-items: center;
+    margin: 5%;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
 }
 
+.poster{
+    margin-right: 3%;
+}
 .serie-main {
     display: flex;
 }

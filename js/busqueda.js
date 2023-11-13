@@ -18,30 +18,32 @@ fetch(url)
     let contenido = "";
     console.log(peliculas)
     
-    for (let i = 0; i < peliculas.length; i++) {
+        for (let i = 0; i < peliculas.length; i++) {
         
-        let pelicula = data.results[i];
-        if (pelicula.backdrop_path === null){
+            let pelicula = data.results[i];
+            if (pelicula.backdrop_path === null){
             console.log(i)
-        }
-        else {
-        let poster = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`
-        contenido += `<div class = "busquedalista">
-            <a href="./pelicula.html"  rel="noopener noreferrer">
+            }
+            else {
+                let poster = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`
+                contenido += `<div class = "busquedalista">
+                <a href="./titulo.html?idPelicula=${pelicula.id}"  rel="noopener noreferrer">
                 <img src=${poster} alt="img" height="300px" width = "210">
-            </a> 
-            <p style="max-width: 210px" >${pelicula.original_title} (${pelicula.release_date})</p>
-        </div><br/>`
-        }
-    
+                </a> 
+                <p style="max-width: 210px" >${pelicula.original_title} (${pelicula.release_date})</p>
+                </div><br/>`
+            }
+            
     }
 
-    let resultadoBusqueda = `<div class = "resultadoh2">
+
+    let resultadoBusqueda =  `<div class = "resultadoh2">
             <h2>Resultado de búsqueda para: ${query} </h2> </div>
             <div class = "listaresultados">
             ${contenido}
             </div>`;
-        
+
+    console.log(peliculas.length)
     listaPeliculas.innerHTML = resultadoBusqueda;
 
 });
