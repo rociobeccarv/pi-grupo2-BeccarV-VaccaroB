@@ -296,13 +296,11 @@ a {
    
     .pelicula-main{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: row;
     }
    
-   .pelicula-main {
 
-    margin: 0%;
-   }
    .peliculainfo{
     display: flex;
     flex-direction: column;
@@ -421,5 +419,6 @@ a {
     height: 240px;
    }
    
+
 }
 
