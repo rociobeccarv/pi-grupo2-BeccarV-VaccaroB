@@ -228,15 +228,21 @@ a {
     margin-left: 4%;
 }
 
-#peliculasBusqueda div{
+.listaresultados {
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: row;
+    flex-wrap: wrap;
 }
+.listaresultados div {
+    margin: 1%;
+}
+
+
 .busqueda-main{
     margin: 3%;
+    display: flex;
 }
-#peliculasBusqueda div p {
+.busquedalista {
     max-width: 100%;
     white-space: nowrap;
     overflow: hidden;
@@ -247,6 +253,10 @@ a {
     display: flex;
     flex-wrap: wrap;
     
+}
+
+.resultadoh2 {
+    display: flex;
 }
 
 /*Medidas telefonos*/

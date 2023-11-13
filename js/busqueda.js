@@ -17,7 +17,7 @@ fetch(url)
     let peliculas = data.results
     let contenido = "";
     console.log(peliculas)
-
+    
     for (let i = 0; i < peliculas.length; i++) {
         
         let pelicula = data.results[i];
@@ -26,7 +26,7 @@ fetch(url)
         }
         else {
         let poster = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`
-        contenido += `<div>
+        contenido += `<div class = "busquedalista">
             <a href="./pelicula.html"  rel="noopener noreferrer">
                 <img src=${poster} alt="img" height="300px" width = "210">
             </a> 
@@ -35,7 +35,14 @@ fetch(url)
         }
     
     }
+
+    let resultadoBusqueda = `<div class = "resultadoh2">
+            <h2>Resultado de búsqueda para: ${query} </h2> </div>
+            <div class = "listaresultados">
+            ${contenido}
+            </div>`;
         
-    listaPeliculas.innerHTML = contenido;
+    listaPeliculas.innerHTML = resultadoBusqueda;
+
 });
 

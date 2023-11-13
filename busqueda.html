@@ -32,11 +32,11 @@
             </h1>
     
             <section class="form">
-                <form action="./busqueda.html">
+                <form class ="searchForm" action = "busqueda.html" method="GET">
                     <label for="busqueda"></label>
-                    <input type="text" class="busqueda" id="busquedaInput" placeholder="Buscar...">
-                    <input type="submit" value="Buscar">
-                </form>
+                    <input type="text" name = "buscador" class= "busqueda" placeholder="Buscar...">
+                    <button type="submit">Buscar</button>
+                </form> 
             </section>
             </section>
             <section class = "menu">
@@ -50,8 +50,8 @@
         </header>
         <main class = "busqueda-main">
 
-            <h2>Resultados de Busqueda:</h2>
-            <section class = "familiares" id="peliculasBusqueda">
+            
+            <section id="peliculasBusqueda">
             </section>
 <!--     
                 <section class = "pelicula avatar ">
