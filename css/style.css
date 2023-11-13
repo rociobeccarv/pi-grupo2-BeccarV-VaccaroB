@@ -104,6 +104,8 @@ h1{
 
 .familiares div {
 
+    display: flex;
+    flex-direction: column;
     margin-right: 3%;
 }
 
@@ -226,6 +228,27 @@ a {
     margin-left: 4%;
 }
 
+#peliculasBusqueda div{
+    display: flex;
+    flex-direction: column;
+    
+}
+.busqueda-main{
+    margin: 3%;
+}
+#peliculasBusqueda div p {
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+#peliculasBusqueda {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
 /*Medidas telefonos*/
 
 @media(max-width:420px){
@@ -263,11 +286,11 @@ a {
     justify-content: row;
     }
    
-   .pelicula-main{
+    .pelicula-main{
     display: flex;
-    justify-content: center;
     flex-direction: column;
-   }
+    }
+   
    .pelicula-main {
 
     margin: 0%;

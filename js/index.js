@@ -13,7 +13,6 @@ let searchForm = document.querySelector('.searchForm');
 let listaMejores = document.querySelector("#mejores");
 let listaPopulares = document.querySelector("#populares");
 let listaSeries = document.querySelector("#series");
-
 menuBtn.addEventListener('click', function (event) {
     event.stopPropagation(); // Evita que el clic en el botón se propague al documento
     menuOptions.style.display = (menuOptions.style.display === 'none') ? 'block' : 'none';
@@ -41,20 +40,13 @@ fetch(Mejorcalificadas)
                 <img src=${poster} alt="avatar" height="300px" width = "210">
             </a> 
             ${pelicula.original_title} (${pelicula.release_date})
-        </div><br/>`   
+        </div><br/>`
+    
     }
-
+        
     listaMejores.innerHTML = contenido;
+});
 
-    function guardarEnLocalStorage(index) {
-        // Obtener la película seleccionada
-        let peliculaSeleccionada = data.results[index];
-    
-        // Convertir la información a cadena JSON y guardar en localStorage
-        localStorage.setItem('peliculaSeleccionada', JSON.stringify(peliculaSeleccionada));
-    }
-    
-})
 
 fetch(PelículasPopulares)
 .then(function(response) {
@@ -72,18 +64,14 @@ fetch(PelículasPopulares)
                 <img src=${poster} alt="avatar" height="300px" width = "210">
             </a> 
             ${pelicula.original_title} (${pelicula.release_date})
-        </div><br/>`   
+        </div><br/>` 
+        
+        
     }
-
+    
     listaPopulares.innerHTML = contenido;
 
-    function guardarEnLocalStorage(index) {
-        // Obtener la película seleccionada
-        let peliculaSeleccionada = data.results[index];
-    
-        // Convertir la información a cadena JSON y guardar en localStorage
-        localStorage.setItem('peliculaSeleccionada', JSON.stringify(peliculaSeleccionada));
-    }
+  
 })
 
 fetch(SeriesPopulares)
@@ -103,18 +91,14 @@ fetch(SeriesPopulares)
                 <img src=${poster} alt="avatar" height="300px" width = "210">
             </a> 
             ${pelicula.original_title} (${pelicula.release_date})
-        </div><br/>`   
+        </div><br/>` 
+        
+       
     }
-
+    
     listaSeries.innerHTML = contenido;
 
-    function guardarEnLocalStorage(index) {
-        // Obtener la película seleccionada
-        let peliculaSeleccionada = data.results[index];
-    
-        // Convertir la información a cadena JSON y guardar en localStorage
-        localStorage.setItem('peliculaSeleccionada', JSON.stringify(peliculaSeleccionada));
-    }
+  
 })
 
 
