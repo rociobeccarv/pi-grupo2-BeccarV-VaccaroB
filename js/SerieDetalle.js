@@ -2,12 +2,15 @@ let qs = location.search;
 let qsObj = new URLSearchParams(qs);
 let idSerie = qsObj.get("idSerie");
 let acaVaLaAPIKey = "1d1a4834e0e0c21ff813f10438647adb";
+let btn = document.querySelector("#btnmas");
+let lista = document.querySelector(".vermas");
 
 /* recuperar del DOM */
 let titulo = document.querySelector(".titulo");
 
 let url = `https://api.themoviedb.org/3/tv/${idSerie}?api_key=${acaVaLaAPIKey}`;
 
+lista.style.display = 'none';
 fetch(url)
     .then(function(response) {
         return response.json();
@@ -51,3 +54,16 @@ fetch(url)
     .catch(function(error) {
         console.log(error);
     });
+
+
+btn.addEventListener("click",function(e){
+    console.log("hola")
+    if (lista.style.display == "block" ) {
+        lista.style.display = "none";
+    } else {
+        lista.style.display = "block";
+       
+    }
+  
+})
+
