@@ -36,7 +36,7 @@ fetch(Mejorcalificadas)
         let pelicula = data.results[i];
         let poster = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`
         contenido += `<div>
-            <a href="./titulo.html?idPelicula=${pelicula.id}"  rel="noopener noreferrer">
+            <a href="./PeliculaDetalle.html?idPelicula=${pelicula.id}"  rel="noopener noreferrer">
                 <img src=${poster} alt="avatar" height="300px" width = "210">
             </a> 
             ${pelicula.original_title} (${pelicula.release_date})
@@ -60,7 +60,7 @@ fetch(PelículasPopulares)
         let pelicula = data.results[i];
         let poster = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`
         contenido += `<div>
-            <a href="./pelicula.html"  rel="noopener noreferrer">
+        <a href="./PeliculaDetalle.html?idPelicula=${pelicula.id}"  rel="noopener noreferrer">
                 <img src=${poster} alt="avatar" height="300px" width = "210">
             </a> 
             ${pelicula.original_title} (${pelicula.release_date})
@@ -84,13 +84,13 @@ fetch(SeriesPopulares)
     let contenido = "";
 
     for (let i = 0; i < 5; i++) {
-        let pelicula = data.results[i];
-        let poster = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`
+        let serie = data.results[i];
+        let poster = `https://image.tmdb.org/t/p/w500/${serie.poster_path}`
         contenido += `<div>
-            <a href="./pelicula.html"  rel="noopener noreferrer">
-                <img src=${poster} alt="avatar" height="300px" width = "210">
+        <a href="./SerieDetalle.html?idSerie=${serie.id}"  rel="noopener noreferrer">
+                <img src=${poster} alt="img" height="300px" width = "210">
             </a> 
-            ${pelicula.original_title} (${pelicula.release_date})
+            ${serie.original_title} (${serie.release_date})
         </div><br/>` 
         
        

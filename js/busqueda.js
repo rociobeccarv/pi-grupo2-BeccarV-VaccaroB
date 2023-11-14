@@ -27,7 +27,7 @@ fetch(url)
             else {
                 let poster = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`
                 contenido += `<div class = "busquedalista">
-                <a href="./titulo.html?idPelicula=${pelicula.id}"  rel="noopener noreferrer">
+                <a href="./PeliculaDetalle.html?idPelicula=${pelicula.id}"  rel="noopener noreferrer">
                 <img src=${poster} alt="img" height="300px" width = "210">
                 </a> 
                 <p style="max-width: 210px" >${pelicula.original_title} (${pelicula.release_date})</p>
