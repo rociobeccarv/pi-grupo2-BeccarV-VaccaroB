@@ -17,7 +17,7 @@ fetch(url)
 
         let info = data.results
         let poster = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
-        let pelicula = `<div> ${data.original_title}</div>`
+        let pelicula = `<div> ${data.original_title} </div>`
         let rating =`<div> RATING: ${data.vote_average}</div>`
         let estreno = `<div> FECHA DE ESTRENO: ${data.release_date}</div>`
         let duracion = ` <div> DURACIÓN: ${data.runtime} minutos </div>`
