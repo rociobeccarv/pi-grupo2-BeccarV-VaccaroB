@@ -259,6 +259,20 @@ a {
     display: flex;
 }
 
+.fav{
+    display: flex;
+    flex-wrap: wrap;
+    padding:10%;
+    margin:10%;
+}
+
+.botonrecom{
+    display: flex;
+    flex-wrap: wrap;
+    margin:2%;
+
+}
+
 /*Medidas telefonos*/
 
 @media(max-width:420px){

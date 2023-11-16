@@ -23,6 +23,7 @@ fetch(url)
         let duracion = ` <div> DURACIÓN: ${data.runtime} minutos </div>`
         let sinopsis =`<div> RESUMEN: ${data.overview}</div>`
         let generos = 'GENEROS: '
+
         
         for (let i = 0; i < data.genres.length; i++){
 
