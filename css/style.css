@@ -262,14 +262,14 @@ a {
 .fav{
     display: flex;
     flex-wrap: wrap;
-    padding:10%;
-    margin:10%;
+    padding:5%;
+    margin:5%;
 }
 
 .botonrecom{
     display: flex;
     flex-wrap: wrap;
-    margin:2%;
+    margin: 1%;
 
 }
 
@@ -454,6 +454,19 @@ a {
     width: 150px;
     height: 240px;
    }
+   .fav{
+    display: flex;
+    flex-wrap: wrap;
+    padding:5%;
+    margin:5%;
+}
+
+.botonrecom{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1%;
+
+}
    
 
 }
