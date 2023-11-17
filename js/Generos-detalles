@@ -1,58 +1,39 @@
+let acaVaLaAPIKey = "1d1a4834e0e0c21ff813f10438647adb"
 
-let urlGenerosPelis = `https://api.themoviedb.org/3/genre/movie/list?api_key=${acaVaLaAPIKey}`;
+let Mejorcalificadas = `https://api.themoviedb.org/3/movie/top_rated?api_key=${acaVaLaAPIKey}`
 
-let urlGenerosSeries = `https://api.themoviedb.org/3/genre/tv/list?api_key=${acaVaLaAPIKey}`;
+let PelículasPopulares =`https://api.themoviedb.org/3/movie/popular?api_key=${acaVaLaAPIKey}`
 
-let listaPelis = document.querySelector(".listaPelis");
+let SeriesPopulares = `https://api.themoviedb.org/3/tv/popular?api_key=${acaVaLaAPIKey}`
 
-let listaSeries = document.querySelector(".listaSeries");
+let menuBtn = document.querySelector('#menuBtn');
+let menuOptions = document.querySelector('#menuOptions');
+let searchForm = document.querySelector('.searchForm');
 
-let acaVaLaAPIKey = "1d1a4834e0e0c21ff813f10438647adb";
-
-xfetch(url)
-.then(function(response) {
-    return response.json();
-})
-.then(function(data) {
-    console.log(data);
-
-    let info = data.results
-    let poster = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
-    let pelicula = `<div> ${data.original_title} </div>`
-    let rating =`<div> RATING: ${data.vote_average}</div>`
-    let estreno = `<div> FECHA DE ESTRENO: ${data.release_date}</div>`
-    let duracion = ` <div> DURACIÓN: ${data.runtime} minutos </div>`
-    let sinopsis =`<div> RESUMEN: ${data.overview}</div>`
-    let generos = 'GENEROS: '
-
-    
-    for (let i = 0; i < data.genres.length; i++){
-
-        generos += `<div class="genero"> ${data.genres[i].name} </div>`
-
-
+let listaMejores = document.querySelector("#mejores");
+let listaPopulares = document.querySelector("#populares");
+let listaSeries = document.querySelector("#series");
+const options = {
+    method: 'GET',
+    headers: {
+      accept: 'application/json',
+      Authorization: 'Bearer 1d1a4834e0e0c21ff813f10438647adb'
     }
-
-    let contenido = ``
-    contenido += `
-            <div class = "poster">
-            <img src=${poster} alt="avatar" height="800px">
-            </div>
-            <div class = "info">
-            ${pelicula}
-            ${rating}
-            ${estreno}
-            ${duracion}
-            ${sinopsis}
-            ${generos}
-            </div>` 
-
-    titulo.innerHTML = contenido;
-    
-})
-.catch(function(error) {
-    console.log(error);
-});
-
-
-
+  };
+  
+  fetch('https://api.themoviedb.org/3/genre/movie/list?language=en', options)
+    .then(response => response.json())
+    .then(response => console.log(response))
+    .catch(err => console.error(err));
+    const options = {
+        method: 'GET',
+        headers: {
+          accept: 'application/json',
+          Authorization: 'Bearer 1d1a4834e0e0c21ff813f10438647adb'
+        }
+      };
+      
+fetch('https://api.themoviedb.org/3/genre/tv/list?language=en', options)
+.then(response => response.json())
+.then(response => console.log(response))
+.catch(err => console.error(err));

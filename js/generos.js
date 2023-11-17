@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let acaVaLaAPIKey = "1d1a4834e0e0c21ff813f10438647adb";
 let pelis = `https://api.themoviedb.org/3/genre/movie/list?api_key=${acaVaLaAPIKey}`;
 let serie = `https://api.themoviedb.org/3/genre/tv/list?api_key=${acaVaLaAPIKey}`;
@@ -52,44 +51,53 @@ fetch(serie)
 .catch(function(error) {
     console.log(error);
 });
-=======
 
-let acaVaLaAPIKey = "1d1a4834e0e0c21ff813f10438647adb"
 
-let Mejorcalificadas = `https://api.themoviedb.org/3/movie/top_rated?api_key=${acaVaLaAPIKey}`
 
-let PelículasPopulares =`https://api.themoviedb.org/3/movie/popular?api_key=${acaVaLaAPIKey}`
+let urlGenerosPelis = `https://api.themoviedb.org/3/genre/movie/list?api_key=${acaVaLaAPIKey}`;
 
-let SeriesPopulares = `https://api.themoviedb.org/3/tv/popular?api_key=${acaVaLaAPIKey}`
+let urlGenerosSeries = `https://api.themoviedb.org/3/genre/tv/list?api_key=${acaVaLaAPIKey}`;
 
-let menuBtn = document.querySelector('#menuBtn');
-let menuOptions = document.querySelector('#menuOptions');
-let searchForm = document.querySelector('.searchForm');
+let listaPelis = document.querySelector(".listaPelis");
 
-let listaMejores = document.querySelector("#mejores");
-let listaPopulares = document.querySelector("#populares");
-let listaSeries = document.querySelector("#series");
-const options = {
-    method: 'GET',
-    headers: {
-      accept: 'application/json',
-      Authorization: 'Bearer 1d1a4834e0e0c21ff813f10438647adb'
+let listaSeries = document.querySelector(".listaSeries");
+
+fetch(urlGenerosPelis)
+.then(function(miRespuesta) {
+    return miRespuesta.json();
+})
+.then(function(miRespuesta) {
+    let generos = miRespuesta.genres;
+    console.log(generos);
+
+    let contenido = "";
+    for (let i = 0; i < generos.length; i++) {
+          contenido += ` <li><a href="./detalle-genero.html?id_genero=${generos[i].id}&nombre=${generos[i].name}">${generos[i].name}</a></li>`
     }
-    };
-  fetch('https://api.themoviedb.org/3/genre/movie/list?language=en', options)
-    .then(response => response.json())
-    .then(response => console.log(response))
-    .catch(err => console.error(err));
-    const options = {
-        method: 'GET',
-        headers: {
-          accept: 'application/json',
-          Authorization: 'Bearer 1d1a4834e0e0c21ff813f10438647adb'
-        }
+    
+    listaPelis.innerHTML = contenido;
+
+})
+.catch(function(miError) {
+    console.log(miError);
+});
+
+fetch(urlGenerosSeries)
+.then(function(miRespuesta) {
+    return miRespuesta.json();
+})
+.then(function(miRespuesta) {
+    let generos = miRespuesta.genres;
+    console.log(generos);
+
+    let contenido = "";
+    for (let i = 0; i < generos.length; i++) {
+        contenido += ` <li><a href="./detalle-genero.html?id_genero=${generos[i].id}&nombre=${generos[i].name}">${generos[i].name}</a></li>`
     }
-      
-fetch('https://api.themoviedb.org/3/genre/tv/list?language=en', options)
-.then(response => response.json())
-.then(response => console.log(response))
-.catch(err => console.error(err))
->>>>>>> 2541ea4bbc5cf9610d893f774190db77f20677a7
+    
+    listaSeries.innerHTML = contenido;
+
+})
+.catch(function(miError) {
+    console.log(miError);
+});

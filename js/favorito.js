@@ -1,103 +1,38 @@
-let acaVaLaAPIKey = "1d1a4834e0e0c21ff813f10438647adb"
-let Mejorcalificadas = `https://api.themoviedb.org/3/movie/top_rated?api_key=${acaVaLaAPIKey}`
+let recuperoStorage = localStorage.getItem('favoritos');
+let favoritos = JSON.parse(recuperoStorage)
+let section = document.querySelector('#lista');
+let favList = '';
 
-let PelículasPopulares =`https://api.themoviedb.org/3/movie/popular?api_key=${acaVaLaAPIKey}`
-
-let SeriesPopulares = `https://api.themoviedb.org/3/tv/popular?api_key=${acaVaLaAPIKey}`
-
-
-let menuBtn = document.querySelector('#menuBtn');
-let menuOptions = document.querySelector('#menuOptions');
-let searchForm = document.querySelector('.searchForm');
-
-let listaMejores = document.querySelector("#mejores");
-let listaPopulares = document.querySelector("#populares");
-let listaSeries = document.querySelector("#series");
-menuBtn.addEventListener('click', function (event) {
-    event.stopPropagation(); // Evita que el clic en el botón se propague al documento
-    menuOptions.style.display = (menuOptions.style.display === 'none') ? 'block' : 'none';
-
-});
-
-    // Cierra el menú si se hace clic fuera de él
-document.addEventListener('click', function () {
-        menuOptions.style.display = 'none';
-});
-
-fetch(Mejorcalificadas)
-.then(function(response) {
-    return response.json();
-})
-.then(function(data) {
-
-    let contenido = "";
-
-    for (let i = 0; i < 5; i++) {
-        let pelicula = data.results[i];
-        let poster = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`
-        contenido += `<div>
-            <a href="./PeliculaDetalle.html?idPelicula=${pelicula.id}"  rel="noopener noreferrer">
-                <img src=${poster} alt="avatar" height="300px" width = "210">
-            </a> 
-            ${pelicula.original_title} (${pelicula.release_date})
-        </div><br/>`
+if (favoritos == null || favoritos.length == 0) {
+    section.innerHTML = '<p class= "titulo"> No hay favoritos seleccionados </p>'
+} else {
     
-    }
-        
-    listaMejores.innerHTML = contenido;
-});
+    for (let i = 0; i < favoritos.length; i++) {
+        let acaVaLaAPIKey = "1d1a4834e0e0c21ff813f10438647adb";
+        let url = `https://api.themoviedb.org/3/movie/${favoritos[i]}?api_key=${acaVaLaAPIKey}`
 
+        fetch(url)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            console.log(data);
 
-fetch(PelículasPopulares)
-.then(function(response) {
-    return response.json();
-})
-.then(function(data) {
+            favList += `<article class="portada">
+                        <a href="./PeliculaDetalle?idPelicula=${data.id}"> <img class="portada-img" src="https://image.tmdb.org/t/p/original${data.poster_path}"></a>
+                        <h2 class="tituloPeli">Titulo: <a href="./detalle-pelicula.html?idPelicula=${data.id}">${data.title}</a> </h2>
+                        <p class="estrenoPeli">Estreno: ${data.release_date}</p>
+                        </article>`;
 
-    let contenido = "";
-
-    for (let i = 0; i < 5; i++) {
-        let pelicula = data.results[i];
-        let poster = `https://image.tmdb.org/t/p/w500/${pelicula.poster_path}`
-        contenido += `<div>
-        <a href="./PeliculaDetalle.html?idPelicula=${pelicula.id}"  rel="noopener noreferrer">
-                <img src=${poster} alt="avatar" height="300px" width = "210">
-            </a> 
-            ${pelicula.original_title} (${pelicula.release_date})
-        </div><br/>` 
-        
+            section.innerHTML = favList;
+            
+        })
+        .catch(function(error) {
+            console.log(error);
+        });
         
     }
-    
-    listaPopulares.innerHTML = contenido;
+}
 
-  
-})
 
-fetch(SeriesPopulares)
-.then(function(response) {
-    return response.json();
-})
-.then(function(data) {
-    console.log(data);
-
-    let contenido = "";
-
-    for (let i = 0; i < 5; i++) {
-        let serie = data.results[i];
-        let poster = `https://image.tmdb.org/t/p/w500/${serie.poster_path}`
-        contenido += `<div>
-        <a href="./SerieDetalle.html?idSerie=${serie.id}"  rel="noopener noreferrer">
-                <img src=${poster} alt="img" height="300px" width = "210">
-            </a> 
-            ${serie.original_title} (${serie.release_date})
-        </div><br/>` 
-        
-       
-    }
-    
-    listaSeries.innerHTML = contenido;
-
-  
-})
 
