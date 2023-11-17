@@ -117,17 +117,21 @@ h1{
 }
 .pelicula-main{
     display: flex;
+    margin: 5%;
 }
 
-.pelicula div {
-    margin-right: 3%
+.info div {
+    margin-right: 3%;
+    
 }
 
 .titulo{
     display: flex;
     margin: 5%;
 }
-
+.titulo div {
+    margin-top: 5%;
+}
 .info {
     display: flex;
     flex-direction: column;
@@ -223,11 +227,6 @@ a {
     justify-content: space-around;
 }
 
-.titulo-genero {
-
-    margin-left: 4%;
-}
-
 .listaresultados {
     display: flex;
     flex-direction: row;
@@ -273,6 +272,24 @@ a {
 
 }
 
+.extra {
+    display: flex;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    flex-direction: column-reverse;
+}
+
+.reco {
+    display: flex;
+    flex-direction: row;
+}
+.reco div{
+    display: flex;
+    flex-direction: column;
+}
 /*Medidas telefonos*/
 
 @media(max-width:420px){
