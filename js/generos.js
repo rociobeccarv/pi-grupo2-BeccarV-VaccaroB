@@ -9,13 +9,14 @@ fetch(pelis)
     return response.json();
 })
 .then(function(data) {
-    console.log(data)
+   
+    let genero = data.genres
     let contenido = "";
-
-    for (let i = 0; i < pelis.length + 1; i++) {
-        let genero = data.genres[i];
-        
-        contenido += `<div class="genero"><a href="./genero.html?idGenero=${genero.id}"  rel="noopener noreferrer"> ${genero} </a></div>`
+    for (let i = 0; i < pelis.length ; i++) {
+        let type = genero[i]
+        if (type !== undefined){
+        contenido += `<div class="genero"><a href="./genero.html?idGenero=(id:${type.id},name:${type.name})"  rel="noopener noreferrer"> ${type.name} </a></div>`
+        }
         
         
     }
@@ -30,74 +31,27 @@ fetch(pelis)
 
 fetch(serie)
 .then(function(response) {
-    return response.json();
-})
-.then(function(data) {
-    console.log(data)
-    let contenido = "";
+     return response.json();
+ })
+ .then(function(data) {
+     
+     let genero = data.genres
+     let contenido = "";
 
-    for (let i = 0; i < serie.length + 1; i++) {
-        let genero = data.genres[i];
-        
-       contenido += `<div class="genero"> ${genero} </div>`
+     for (let i = 0; i < serie.length ; i++) {
+        let type = genero[i]
+        if (type !== undefined){
+        contenido += `<div class="genero"><a href="./genero.html?idGenero=${type.id}"  rel="noopener noreferrer"> ${type.name} </a></div>`
+        }
         
         
     }
     
-    series.innerHTML = contenido;
+    
+     series.innerHTML = contenido;
 
   
-})
-.catch(function(error) {
-    console.log(error);
-});
-
-
-
-let urlGenerosPelis = `https://api.themoviedb.org/3/genre/movie/list?api_key=${acaVaLaAPIKey}`;
-
-let urlGenerosSeries = `https://api.themoviedb.org/3/genre/tv/list?api_key=${acaVaLaAPIKey}`;
-
-let listaPelis = document.querySelector(".listaPelis");
-
-let listaSeries = document.querySelector(".listaSeries");
-
-fetch(urlGenerosPelis)
-.then(function(miRespuesta) {
-    return miRespuesta.json();
-})
-.then(function(miRespuesta) {
-    let generos = miRespuesta.genres;
-    console.log(generos);
-
-    let contenido = "";
-    for (let i = 0; i < generos.length; i++) {
-          contenido += ` <li><a href="./detalle-genero.html?id_genero=${generos[i].id}&nombre=${generos[i].name}">${generos[i].name}</a></li>`
-    }
-    
-    listaPelis.innerHTML = contenido;
-
-})
-.catch(function(miError) {
-    console.log(miError);
-});
-
-fetch(urlGenerosSeries)
-.then(function(miRespuesta) {
-    return miRespuesta.json();
-})
-.then(function(miRespuesta) {
-    let generos = miRespuesta.genres;
-    console.log(generos);
-
-    let contenido = "";
-    for (let i = 0; i < generos.length; i++) {
-        contenido += ` <li><a href="./detalle-genero.html?id_genero=${generos[i].id}&nombre=${generos[i].name}">${generos[i].name}</a></li>`
-    }
-    
-    listaSeries.innerHTML = contenido;
-
-})
-.catch(function(miError) {
-    console.log(miError);
-});
+ })
+ .catch(function(error) {
+     console.log(error);
+ });

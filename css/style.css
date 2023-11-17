@@ -130,7 +130,7 @@ h1{
     margin: 5%;
 }
 .titulo div {
-    margin-top: 2%;
+    margin-top: 5%;
 }
 .info {
     display: flex;
@@ -290,7 +290,6 @@ a {
     display: flex;
     flex-direction: column;
 }
-
 /*Medidas telefonos*/
 
 @media(max-width:420px){

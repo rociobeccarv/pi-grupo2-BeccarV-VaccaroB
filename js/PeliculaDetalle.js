@@ -20,13 +20,13 @@ fetch(recomendations)
     console.log(data);
 
 let lst = ``
-for (let i = 0; i < 5; i++){
+for (let i = 0; i < 2; i++){
     let serie = data.results[i];
     let poster = `https://image.tmdb.org/t/p/w500/${serie.poster_path}`
     lst += `
     <ul class= "reco"> 
     <div>
-    <a href="./SerieDetalle.html?idSerie=${serie.id}"  rel="noopener noreferrer">
+    <a href="./PeliculaDetalle.html?idPelicula=${serie.id}"  rel="noopener noreferrer">
         <img src=${poster} alt="img" height="300px" width = "210">
     </a> 
     ${serie.original_title} (${serie.release_date})
