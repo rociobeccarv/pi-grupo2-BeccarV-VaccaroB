@@ -68,15 +68,9 @@ fetch(PelículasPopulares)
 
 
         }
-<<<<<<< HEAD
 
         listaPopulares.innerHTML = contenido;
 
-=======
-
-        listaPopulares.innerHTML = contenido;
-
->>>>>>> 848aa3fc0b2d8bb3f39c8952146a608bd1b493e1
 
     })
 
@@ -106,9 +100,5 @@ fetch(SeriesPopulares)
 
 
     })
-<<<<<<< HEAD
-
-=======
->>>>>>> 848aa3fc0b2d8bb3f39c8952146a608bd1b493e1
 
 
