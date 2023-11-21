@@ -11,9 +11,15 @@ fetch(url)
     .then(function (res) {
         return res.json();
     })
+<<<<<<< HEAD
 
     .then(function (data) {
 
+=======
+
+    .then(function (data) {
+
+>>>>>>> 848aa3fc0b2d8bb3f39c8952146a608bd1b493e1
         let peliculas = data.results
         let contenido = "";
         console.log(peliculas)
@@ -33,10 +39,18 @@ fetch(url)
                 <p style="max-width: 210px" >${pelicula.original_title} (${pelicula.release_date})</p>
                 </div><br/>`
             }
+<<<<<<< HEAD
+=======
+
+        }
+>>>>>>> 848aa3fc0b2d8bb3f39c8952146a608bd1b493e1
 
         }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 848aa3fc0b2d8bb3f39c8952146a608bd1b493e1
         let resultadoBusqueda = `<div class = "resultadoh2">
             <h2>Resultado de búsqueda para: ${query} </h2> </div>
             <div class = "listaresultados">
@@ -45,8 +59,13 @@ fetch(url)
 
         console.log(peliculas.length)
         listaPeliculas.innerHTML = resultadoBusqueda;
+<<<<<<< HEAD
 
     });
 
 
+=======
+
+    });
+>>>>>>> 848aa3fc0b2d8bb3f39c8952146a608bd1b493e1
 
