@@ -1,10 +1,10 @@
-
 body {
     background-color: white;
     margin: 0px;
     font-family: 'Bebas Neue', sans-serif;
 }
-.top{
+
+.top {
     display: flex;
     flex-wrap: wrap;
     box-sizing: border-box;
@@ -12,16 +12,17 @@ body {
     background-color: #B9CEAD;
     height: 20vh;
 }
-.navegation{
-    list-style:none;
+
+.navegation {
+    list-style: none;
     display: flex;
     justify-content: space-between;
-   
+
 }
 
 .Nav {
     width: 80%;
-    color:#3E3E36;
+    color: #3E3E36;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -32,22 +33,25 @@ body {
 
 .Nav a {
     text-decoration: none;
-    color: #3E3E36 
+    color: #3E3E36
 }
-.form{
+
+.form {
 
     display: flex;
     align-items: center;
     margin-left: 15%;
-    
+
 }
+
 .menu {
     display: flex;
     align-items: center;
     justify-content: flex-end;
     margin-left: 3%;
-    
+
 }
+
 .logo {
     display: flex;
     justify-content: center;
@@ -66,7 +70,7 @@ body {
 
     display: flex;
     justify-content: center;
-    align-items: center;  
+    align-items: center;
 }
 
 .bottom {
@@ -77,6 +81,7 @@ body {
     justify-content: center;
 
 }
+
 .TMDB {
     display: flex;
     align-items: center;
@@ -84,7 +89,7 @@ body {
     margin-right: 3%
 }
 
-h1{
+h1 {
     color: #3E3E36;
     display: flex;
     align-items: center;
@@ -112,26 +117,30 @@ h1{
 .series div {
     margin-right: 3%
 }
+
 .series {
     display: flex;
 }
-.pelicula-main{
+
+.pelicula-main {
     display: flex;
     margin: 5%;
 }
 
 .info div {
     margin-right: 3%;
-    
+
 }
 
-.titulo{
+.titulo {
     display: flex;
     margin: 5%;
 }
+
 .titulo div {
     margin-top: 5%;
 }
+
 .info {
     display: flex;
     flex-direction: column;
@@ -140,14 +149,15 @@ h1{
     margin: 3%;
 }
 
-.poster{
+.poster {
     margin-right: 3%;
 }
+
 .serie-main {
     display: flex;
 }
 
-.serie{
+.serie {
 
     margin-left: 5%;
     margin-top: 5%;
@@ -165,25 +175,19 @@ a {
     text-decoration: none;
     color: #3E3E36;
 }
-.favorito-main{
+
+.favList {
     display: flex;
-    flex-direction: row;
-    padding: 5%;
-    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
-.favorito-main img {
-    height: 300px;
-}
+.favList div {
+    display: flex;
+    flex-direction: column;
 
-.favoritos h1 {
-
-    margin-left: 5%;
-}
-
-.favoritos h3 {
-
-    margin-left: 5%;
 }
 
 .generosmain {
@@ -191,40 +195,12 @@ a {
     margin: 2%
 }
 
-.generosmain h3 {
-
-    margin: 3%
-}
-
-.generos { 
+.pelis {
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
 }
 
-.generos div {
-    display: flex;
-    flex-direction: column;
-    margin: 2%;
-}
-
-.generos h4 {
-    background-color: #3e3e3650;
-    color:#3E3E36;
-}
-
-.peli-genero {
-    display: flex;
-    flex-direction: row;
-    padding-left: 2%;
-    justify-content: space-around;
-}
-
-.series-genero {
-    display: flex;
-    flex-direction: row;
-    padding-left: 2%;
-    justify-content: space-around;
+.pelis div {
+    margin-right: 1%;
 }
 
 .listaresultados {
@@ -232,15 +208,17 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
 }
+
 .listaresultados div {
     margin: 1%;
 }
 
 
-.busqueda-main{
+.busqueda-main {
     margin: 3%;
     display: flex;
 }
+
 .busquedalista {
     max-width: 100%;
     white-space: nowrap;
@@ -248,24 +226,25 @@ a {
     text-overflow: ellipsis;
     text-align: center;
 }
+
 #peliculasBusqueda {
     display: flex;
     flex-wrap: wrap;
-    
+
 }
 
 .resultadoh2 {
     display: flex;
 }
 
-.fav{
+.fav {
     display: flex;
     flex-wrap: wrap;
-    padding:5%;
-    margin:5%;
+    padding: 5%;
+    margin: 5%;
 }
 
-.botonrecom{
+.botonrecom {
     display: flex;
     flex-wrap: wrap;
     margin: 1%;
@@ -286,205 +265,256 @@ a {
     display: flex;
     flex-direction: row;
 }
-.reco div{
+
+.reco div {
     display: flex;
     flex-direction: column;
 }
+
+.GenerosP {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.GenerosP div {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.GenerosS {
+    display: flex;
+    align-items: center;
+
+    .GenerosP {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .GenerosP div {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.GenerosS div {
+    display: flex;
+    flex-direction: column;
+
+}
+
 /*Medidas telefonos*/
 
-@media(max-width:420px){
+@media(max-width:420px) {
 
- 
-    .navHeader{
+
+    .navHeader {
         margin-left: 10px;
     }
 
-   .top {
+    .top {
 
-    width : 100%;
-   }
-
-   .logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    margin: 0%;
-    margin-top: 1%;
-   }
-
-   .sectionheader {
-    width: 100%;
-   }
-
-   .navbar{
-    flex-direction: column;
-    width: 65%;
-   }
-   .middle {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: row;
-    }
-   
-    .pelicula-main{
-    display: flex;
-    flex-wrap: wrap;
-
-     }
-
-    .info{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 1%;
-    margin: 3%;
-    }
-    
-
-    .poster{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    }
-   
-    .poster img{
-    display: flex;
-    flex-direction: row-reverse;
-    width: 160px;
-    height: 250px;
+        width: 100%;
     }
 
-   .peliculainfo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 10%;
-   }
+    .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        margin: 0%;
+        margin-top: 1%;
+    }
 
-   .avatar {
-    display: flex;
-    justify-content: center;
-   }
+    .sectionheader {
+        width: 100%;
+    }
 
-   .bottom h1 {
-    display: flex;
-    justify-self: flex-end;
-    justify-content: center;
-    align-items: center;
-   }
+    .navbar {
+        flex-direction: column;
+        width: 65%;
+    }
 
-   .familiares {
+    .middle {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: row;
+    }
 
-    display: flex;
-    flex-wrap: wrap;
-    
-   }
+    .pelicula-main {
+        display: flex;
+        flex-wrap: wrap;
 
-   .familiares img { 
+    }
 
-    width: 160px;
-    height: 250px;
-   }
-   .series{
-   
-    display: flex;
-    flex-wrap: wrap;
-    
+    .info {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 1%;
+        margin: 3%;
+    }
 
-   }
 
-   .series img {
+    .poster {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 
-    width: 150px;
-    height: 240px;
+    .poster img {
+        display: flex;
+        flex-direction: row-reverse;
+        width: 160px;
+        height: 250px;
+    }
 
-   }
+    .peliculainfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10%;
+    }
 
-   .series div {
+    .avatar {
+        display: flex;
+        justify-content: center;
+    }
 
-    width: 45%;
-   }
-   .pelis {
-    flex-wrap: wrap;
-   }
+    .bottom h1 {
+        display: flex;
+        justify-self: flex-end;
+        justify-content: center;
+        align-items: center;
+    }
 
-   .generos div {
+    .familiares {
 
-    width:55px;
-    
-   }
+        display: flex;
+        flex-wrap: wrap;
 
-   .generosmain {
-    height: 65vh;
-   }
+    }
 
-   .favorito-main {
-    display: flex;
-    flex-wrap: wrap;
-   }
-   .favorito-main img{
-    
-    width: 150px;
-    height: 240px;
+    .familiares img {
 
-   }
+        width: 160px;
+        height: 250px;
+    }
 
-   .favorito-main div {
-    width: 45%;
-   }
+    .series {
 
-   .serie info {
+        display: flex;
+        flex-wrap: wrap;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 10%;
 
-   } 
-   .serie-main {
-    display: flex;
-    flex-direction: column;
+    }
 
-   }
+    .series img {
 
-   .peli-genero {
+        width: 150px;
+        height: 240px;
 
-    flex-wrap: wrap;
-    padding: 0%;
-    margin: 2%;
-   }
+    }
 
-   .peli-genero img{
-    
-    width: 150px;
-    height: 240px;
-   }
-   .series-genero {
+    .series div {
 
-    flex-wrap: wrap;
-    padding: 0%;
-    margin: 2%;
-   }
+        width: 45%;
+    }
 
-   .series-genero img{
-    
-    width: 150px;
-    height: 240px;
-   }
-   .fav{
-    display: flex;
-    flex-wrap: wrap;
-    padding:5%;
-    margin:5%;
+    .pelis {
+        flex-wrap: wrap;
+    }
+
+    .generos div {
+
+        width: 55px;
+
+    }
+
+    .generosmain {
+        height: 65vh;
+    }
+
+    .favorito-main {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .favorito-main img {
+
+        width: 150px;
+        height: 240px;
+
+    }
+
+    .favorito-main div {
+        width: 45%;
+    }
+
+    .serie info {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 10%;
+
+    }
+
+    .serie-main {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    .peli-genero {
+
+        flex-wrap: wrap;
+        padding: 0%;
+        margin: 2%;
+    }
+
+    .peli-genero img {
+
+        width: 150px;
+        height: 240px;
+    }
+
+    .series-genero {
+
+        flex-wrap: wrap;
+        padding: 0%;
+        margin: 2%;
+    }
+
+    .series-genero img {
+
+        width: 150px;
+        height: 240px;
+    }
+
+    .fav {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5%;
+        margin: 5%;
+    }
+
+    .botonrecom {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 1%;
+
+    }
+
+
 }
-
-.botonrecom{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1%;
-
-}
-   
-
-}
-

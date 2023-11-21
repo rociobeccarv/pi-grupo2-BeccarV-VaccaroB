@@ -9,22 +9,22 @@ let titulo = document.querySelector(".titulo");
 let url = `https://api.themoviedb.org/3/movie/${idPelicula}?api_key=${acaVaLaAPIKey}`;
 
 fetch(url)
-    .then(function(response) {
+    .then(function (response) {
         return response.json();
     })
-    .then(function(data) {
+    .then(function (data) {
         console.log(data);
 
         let info = data.results
         let poster = `https://image.tmdb.org/t/p/w500/${data.poster_path}`
         let serie = `<div> ${data.original_title}</div>`
-        let rating =`<div> RATING: ${data.vote_average}</div>`
+        let rating = `<div> RATING: ${data.vote_average}</div>`
         let estreno = `<div> FECHA DE ESTRENO: ${data.release_date}</div>`
         let duracion = ` <div> DURACIÓN: ${data.runtime} minutos </div>`
-        let sinopsis =`<div> RESUMEN: ${data.overview}</div>`
+        let sinopsis = `<div> RESUMEN: ${data.overview}</div>`
         let generos = 'GENEROS: '
-        
-        for (let i = 0; i < data.genres.length; i++){
+
+        for (let i = 0; i < data.genres.length; i++) {
 
             generos += `<div class="genero"> ${data.genres[i].name} </div>`
 
@@ -43,11 +43,11 @@ fetch(url)
                 ${duracion}
                 ${sinopsis}
                 ${generos}
-                </div>` 
+                </div>`
 
         titulo.innerHTML = contenido;
-        
+
     })
-    .catch(function(error) {
+    .catch(function (error) {
         console.log(error);
     });
